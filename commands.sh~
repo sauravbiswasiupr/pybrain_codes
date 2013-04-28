@@ -1,0 +1,11 @@
+#!/bin/bash 
+
+python LSTM_Mnist.py 1 >> results_1.txt
+python LSTM_MNIST.py 2 >> results_2.txt
+python LSTM_Mnist.py 3 >> results_3.txt
+python LSTM_Mnist.py 4 >> results_4.txt
+python LSTM_Mnist.py 5 >> results_5.txt
+python LSTM_Mnist.py 6 >> results_6.txt
+python LSTM_Mnist.py 7 >> results_7.txt
+python LSTM_Mnist.py 8 >> results_8.txt
+python LSTM_Mnist.py 9 >> results_9.txt

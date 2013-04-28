@@ -1,0 +1,27 @@
+#!/usr/bin/python 
+
+import numpy
+from pybrain.datasets import SequenceClassificationDataSet 
+
+
+def create_training_data(training_set):
+  DS = SequenceClassificationDataSet(28*28 , 1 , nb_classes=10)
+  length = training_set[0].shape[0] 
+  for l in xrange(length):
+    DS.newSequence() 
+    img = training_set[0][l] 
+    targ = training_set[1][l] 
+    for j in xrange(1):
+      DS.addSample(img , targ) 
+  return DS 
+
+def create_test_data(test_set):
+  DS = SequenceClassificationDataSet(28*28,1,nb_classes=10)
+  length = test_set[0].shape[0] 
+  for i  in xrange(length): 
+      DS.newSequence() 
+      img = test_set[0][i]
+      targ = test_set[1][i] 
+      
+      DS.addSample(img , targ) 
+  return DS 
